@@ -22,13 +22,21 @@ use Elyaash\CurrencyInput\CurrencyInput;
 
 CurrencyInput::make("Field");
 ```
+Default currency is USD, but other currencies (EUR, JPY) can also be set using **currency** method, see example below.
 
-### How does it look?
+```
+CurrencyInput::make("Field")
+    ->currency('EUR')  
+```
+
+Default formatting on display is on, but it can be turned off using **formatOnDisplay**, see example below.
+``` 
+CurrencyInput::make("Field")
+    ->formatOnDisplay(false)  
+```
 
 Form View
 ![Form view](docs/formview.png)
 
 Detail View:
-
-Form View
 ![Form view](docs/detailview.png)
