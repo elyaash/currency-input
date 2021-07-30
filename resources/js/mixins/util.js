@@ -38,7 +38,7 @@ export const Util = {
          * @returns {string|*}
          */
         currencyFormat(value) {
-            if (!this.field.formatOnDisplay) return $value;
+            if (!this.field.formatOnDisplay) return value;
 
             if (!this.formatter) this.initFormatter();
 

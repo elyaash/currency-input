@@ -29,7 +29,7 @@ class CurrencyInput extends Field
      */
     public function currency($currency) {
         return $this->withMeta([
-            'currencycurrency' => $currency
+            'currency' => $currency
         ]);
     }
 
