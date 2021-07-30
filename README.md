@@ -22,3 +22,13 @@ use Elyaash\CurrencyInput\CurrencyInput;
 
 CurrencyInput::make("Field");
 ```
+
+### How does it look?
+
+Form View
+![Form view](docs/formview.png)
+
+Detail View:
+
+Form View
+![Form view](docs/detailview.png)

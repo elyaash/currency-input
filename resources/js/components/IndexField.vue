@@ -1,9 +1,11 @@
 <template>
-    <span>{{ field.value }}</span>
+    <span>{{ currencyFormat(field.value) }} </span>
 </template>
 
 <script>
-export default {
-    props: ['resourceName', 'field'],
-}
+    import { Util } from '../mixins/util.js'
+    export default {
+        mixins: [Util],
+        props: ['resourceName', 'field'],
+    }
 </script>

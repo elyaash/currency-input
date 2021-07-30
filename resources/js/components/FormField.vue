@@ -10,6 +10,8 @@
                 :placeholder="field.name"
                 v-model="value"
                 @blur="handleBlur"
+                ref="inputCurrencyField"
+
             />
             <input v-show="!active"
                    :id="currencyDisplay"
@@ -25,10 +27,12 @@
 </template>
 
 <script>
+
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import { Util } from '../mixins/util.js'
 
 export default {
-    mixins: [FormField, HandlesValidationErrors],
+    mixins: [FormField, HandlesValidationErrors, Util],
 
     props: ['resourceName', 'resourceId', 'field'],
 
@@ -38,16 +42,8 @@ export default {
         }
     },
 
-    computed: {
-        currency() {
-            if (!this.formatter) {
-                this.formatter = new Intl.NumberFormat('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                });
-            }
-            return this.formatter.format(this.value);
-        },
+    updated() {
+        if (this.active) this.$refs.inputCurrencyField.focus();
     },
 
     methods: {
