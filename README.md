@@ -34,6 +34,7 @@ Default formatting on display is on, but it can be turned off using **formatOnDi
 CurrencyInput::make("Field")
     ->formatOnDisplay(false)  
 ```
+## Demo
 
 Form View
 ![Form view](docs/formview.png)
